@@ -45,32 +45,16 @@ function combinar($izquierda, $derecha) {
 }
 
 // Ejemplo de uso
-$arr = [38, 27, 43, 3, 9, 82, 10];
-$ordenado = mergeSort($arr);
-echo "Arreglo original: " . implode(", ", $arr) . "<br/>";
-echo "Arreglo ordenado: " . implode(", ", $ordenado) . "<br/>";
-echo "<hr/>";
-
-$arr2 = [5, 2, 9, 1, 5, 6];
-$ordenado2 = mergeSort($arr2);
-echo "Arreglo original: " . implode(", ", $arr2) . "<br/>";
-echo "Arreglo ordenado: " . implode(", ", $ordenado2) . "<br/>";
-echo "<hr/>";
-
-$arr3 = [1, 4, 2, 8, 5, 7];
-$ordenado3 = mergeSort($arr3);
-echo "Arreglo original: " . implode(", ", $arr3) . "<br/>";
-echo "Arreglo ordenado: " . implode(", ", $ordenado3) . "<br/>";
-echo "<hr/>";
-
-$arr4 = [10, 20, 30, 40, 50];
-$ordenado4 = mergeSort($arr4);
-echo "Arreglo original: " . implode(", ", $arr4) . "<br/>";
-echo "Arreglo ordenado: " . implode(", ", $ordenado4) . "<br/>";
-echo "<hr/>";
-
-$arr5 = [100, 90, 80, 70, 60];
-$ordenado5 = mergeSort($arr5);
-echo "Arreglo original: " . implode(", ", $arr5) . "<br/>";
-echo "Arreglo ordenado: " . implode(", ", $ordenado5) . "<br/>";
-echo "<hr/>";
+$arreglos = [
+    [38, 27, 43, 3, 9, 82, 10],
+    [5, 2, 9, 1, 5, 6],
+    [1, 4, 2, 8, 5, 7],
+    [10, 20, 30, 40, 50],
+    [100, 90, 80, 70, 60]
+];
+foreach ($arreglos as $arr) {
+    $ordenado = mergeSort($arr);
+    echo "↪️ Arreglo original: " . implode(", ", $arr) . "<br/>";
+    echo "🔄 Arreglo ordenado: " . implode(", ", $ordenado) . "<br/>";
+    echo "<hr/>";
+}

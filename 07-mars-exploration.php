@@ -31,32 +31,16 @@ function marsExploration($sos) {
 }
 
 // Ejemplo de uso
-$sos = "SOSSPSSQSSOR";
-$cantidadErrores = marsExploration($sos);
-echo "La cantidad de errores en el mensaje '$sos' es: $cantidadErrores";
-echo "<hr/>";
-
-$sos = "SOSSOT";
-$cantidadErrores = marsExploration($sos);
-echo "La cantidad de errores en el mensaje '$sos' es: $cantidadErrores";
-echo "<hr/>";
-
-$sos = "SOSOOS";
-$cantidadErrores = marsExploration($sos);
-echo "La cantidad de errores en el mensaje '$sos' es: $cantidadErrores";
-echo "<hr/>";
-
-$sos = "SOS";
-$cantidadErrores = marsExploration($sos);
-echo "La cantidad de errores en el mensaje '$sos' es: $cantidadErrores";
-echo "<hr/>";
-
-$sos = "SOSSSS";
-$cantidadErrores = marsExploration($sos);
-echo "La cantidad de errores en el mensaje '$sos' es: $cantidadErrores";
-echo "<hr/>";
-
-$sos = "SOSSSOS";
-$cantidadErrores = marsExploration($sos);
-echo "La cantidad de errores en el mensaje '$sos' es: $cantidadErrores";
-echo "<hr/>";
+$seniales = [
+    "SOSSPSSQSSOR",
+    "SOSSOT",
+    "SOSOOS",
+    "SOS",
+    "SOSSSS",
+    "SOSSSOS"
+];
+foreach ($seniales as $sos) {
+    $cantidadErrores = marsExploration($sos);
+    echo "🆘 La cantidad de errores en el mensaje '$sos' es: $cantidadErrores";
+    echo "<hr/>";
+}

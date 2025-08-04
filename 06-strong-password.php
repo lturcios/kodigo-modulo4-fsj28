@@ -12,24 +12,15 @@ function strongPasswordChecker($password) {
 }
 
 // Ejemplo
-$password = "2bbbb";
-$cantidadFaltante = strongPasswordChecker($password);
-echo "La contraseña '$password' requiere $cantidadFaltante caracteres adicionales para ser segura.";
-echo "<hr/>";
+$passwords = [
+    "2bbbb",
+    "2bb#A",
+    "Ab1",
+    "#HackerRank"
+];
 
-$password = "2bb#A";
-$cantidadFaltante = strongPasswordChecker($password);
-echo "La contraseña '$password' requiere $cantidadFaltante caracteres adicionales para ser segura.";
-echo "<hr/>";
-
-// Pruebas adicionales
-$password = "Ab1";
-$cantidadFaltante = strongPasswordChecker($password);
-echo "La contraseña '$password' requiere $cantidadFaltante caracteres adicionales para ser segura.";
-echo "<hr/>";
-
-$password = "#HackerRank";
-$cantidadFaltante = strongPasswordChecker($password);
-echo "La contraseña '$password' requiere $cantidadFaltante caracteres adicionales para ser segura.";
-echo "<hr/>";
-
+foreach ($passwords as $password) {
+    $cantidadFaltante = strongPasswordChecker($password);
+    echo "🔐 La contraseña <strong>$password</strong> requiere $cantidadFaltante caracteres adicionales para ser segura.<br/>";
+    echo "<hr/>";
+}

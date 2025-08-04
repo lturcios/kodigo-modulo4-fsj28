@@ -16,17 +16,9 @@ function cakeCandles($candelas) {
 
 }
 
-$candelas = [4, 4, 1, 3, 2];
-cakeCandles($candelas);
+$pasteles = [[4, 4, 1, 3, 2], [3, 2, 1, 3], [1, 2, 3, 4, 5], [5, 5, 5, 5, 5], [1, 2, 3, 4, 5, 6, 7, 8, 9]];
 
-$candelas = [3, 2, 1, 3];
-cakeCandles($candelas);
-
-$candelas = [1, 2, 3, 4, 5];
-cakeCandles($candelas);
-
-$candelas = [5, 5, 5, 5, 5];
-cakeCandles($candelas);
-
-$candelas = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-cakeCandles($candelas);
+foreach ($pasteles as $candelas) {
+    echo "🎂 Velas del pastel: " . implode(", ", $candelas) . "<br/>";
+    cakeCandles($candelas);
+}
